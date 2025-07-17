@@ -1,7 +1,5 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import RecoilProvider from './config/RecoilProvider';
-import ReactQueryProvider from './config/ReactQueryProvider';
 
 export const metadata: Metadata = {
   title: 'supa-todo',
@@ -16,11 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body>
-        <ReactQueryProvider>
-          <RecoilProvider>{children}</RecoilProvider>
-        </ReactQueryProvider>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

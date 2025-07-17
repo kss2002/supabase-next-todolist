@@ -1,8 +1,10 @@
+import UI from './ui/ui';
+
 export default function Home() {
   return (
     <>
       <main>
-        <h1>hello supabase!</h1>
+        <UI />
       </main>
     </>
   );
