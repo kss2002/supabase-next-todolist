@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { ThemeProvider } from './config/material-tailwind-theme-provider';
+import ReactQueryClientProvider from './config/ReactQueryClientProvider';
 
 export const metadata: Metadata = {
   title: 'supa-todo',
@@ -26,8 +27,9 @@ export default function RootLayout({
             referrerPolicy="no-referrer"
           />
         </head>
-
-        <body>{children}</body>
+        <ReactQueryClientProvider>
+          <body>{children}</body>
+        </ReactQueryClientProvider>
       </html>
     </ThemeProvider>
   );
