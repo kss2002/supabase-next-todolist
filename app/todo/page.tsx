@@ -3,7 +3,7 @@
 import { useMutation, useQuery } from 'react-query';
 import { getTodos, createTodo } from '../actions/todo-action';
 import { useState } from 'react';
-import { queryClient } from '../config/ReactQueryProvider';
+import { queryClient } from '../config/ReactQueryClientProvider';
 
 export default function TodosPage() {
   const [todoInput, setTodoInput] = useState('');
@@ -20,7 +20,7 @@ export default function TodosPage() {
     },
     onSuccess: (TODOS) => {
       //   todosQuery.refetch();
-      queryClient.invalidateQueries(['todos']);
+      queryClient.invalidateQueries({ queryKey: ['todos'] });
     },
     onError: (error: any) => {
       alert(error.message);
