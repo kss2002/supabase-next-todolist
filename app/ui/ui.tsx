@@ -12,11 +12,22 @@ export default function UI() {
         label="Search TODO"
         placeholder="할일을 검색하세요"
         icon={<i className="fas fa-search" />}
+        crossOrigin=""
+        onResize={undefined}
+        onResizeCapture={undefined}
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
       />
 
       <Todo />
 
-      <Button>
+      <Button
+        placeholder=""
+        onResize={undefined}
+        onResizeCapture={undefined}
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
+      >
         <i className="fas fa-plus mr-2" />
         ADD TODO
       </Button>
